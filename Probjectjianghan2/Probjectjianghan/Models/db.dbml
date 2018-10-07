@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="project" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=project;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="projectConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.userGroup" Member="userGroup">
+    <Type Name="userGroup">
+      <Column Name="groupID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="groupName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="users">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userAccount" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="userPwd" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="userState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="groupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lastLoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.bh_data" Member="bh_data">
+    <Type Name="bh_data">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbigarea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nsmallarea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="pcl" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pcr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ls" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cwl" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cwr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mtl1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mtr1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="rtl1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="rtr1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sdtl" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="olt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="mln" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cbd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ctc_data" Member="ctc_data">
+    <Type Name="ctc_data">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nbigarea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nsmallarea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="sn" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="pc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="rhm" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mhc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mrc" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="minmaxwr" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cbw" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cjbw" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="sh" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="maxah" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="hs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ts" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ss" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cw" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="mln" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hwt" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="twt" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="sgt" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="cmt" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="hr" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="lcot" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="mcot" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cc_bh" Member="cc_bh">
+    <Type Name="cc_bh">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContractNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fhtime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mln" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pcl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pcr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ls" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cwl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cwr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mtl1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mtl2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mtl3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mtr1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mtr2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mtr3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mnl1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mnl2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mnl3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mnr1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mnr2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mnr3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rtl1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rtl2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rtl3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rnl1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rnl2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rnl3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rtr1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rtr2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rtr3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rnr1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rnr2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rnr3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdtl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdtr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdnl" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdnr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="olt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="oln" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="oln2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sp1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sp2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="y" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="m" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="d" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cbd" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cc_ctc" Member="cc_ctc">
+    <Type Name="cc_ctc">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ContractNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fhtime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fm" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mln" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="pc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cw" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="rhm" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mhc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mrc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="minmaxwr" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cbw" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cjbw" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="maxah" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hs" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ts" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hwt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hwn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="twt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="twn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sgt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sgn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cmt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cmn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lcot" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lcon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mcot" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mcon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="y" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="m" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="d" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hr" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.catalog" Member="catalog">
+    <Type Name="catalog">
+      <Column Name="catID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="catName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="catOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="parentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
